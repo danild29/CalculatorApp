@@ -1,4 +1,8 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using Calculator.View;
+using Calculator.ViewModel;
+using CommunityToolkit.Maui;
+using Microsoft.Extensions.Logging;
+using Microsoft.Maui.Hosting;
 
 namespace Calculator;
 public static class MauiProgram
@@ -8,6 +12,7 @@ public static class MauiProgram
         var builder = MauiApp.CreateBuilder();
         builder
             .UseMauiApp<App>()
+            .UseMauiCommunityToolkit()
             .ConfigureFonts(fonts =>
             {
                 fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
@@ -17,6 +22,9 @@ public static class MauiProgram
 #if DEBUG
 		builder.Logging.AddDebug();
 #endif
+
+        builder.Services.AddSingleton<MainCalculatorViewModel>();
+        builder.Services.AddSingleton<MainCalculator>();
 
         return builder.Build();
     }

@@ -3,13 +3,13 @@
     x:Class="Calculator.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:Calculator"
+    xmlns:v="clr-namespace:Calculator.View"
     Shell.FlyoutBehavior="Disabled"
     Title="Calculator">
 
     <ShellContent
         Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
+        ContentTemplate="{DataTemplate v:MainCalculator}"
         Route="MainPage" />
 
 </Shell>

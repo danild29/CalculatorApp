@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calculator.View.MainCalculator"
+             xmlns:vm="clr-namespace:Calculator.ViewModel"
+             Shell.NavBarIsVisible="false"
+             x:DataType="vm:MainCalculatorViewModel"
+             Title="MainCalculator">
+
+    <StackLayout Orientation="Horizontal">
+        <Entry TextColor="Black" Text="{Binding Input}" Margin="0,12,43,0"/>
+
+        <Button Text="Calculate" TextColor="White" FontSize="12" FontFamily="RobotoMono" FontAttributes="Bold" CharacterSpacing="0" Margin="44,10,43,35"
+                                    CornerRadius="20" Command="{Binding CalculateCommand}">
+         </Button>
+    </StackLayout>
+</ContentPage>
