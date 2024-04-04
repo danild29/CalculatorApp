@@ -7,8 +7,9 @@
              x:DataType="vm:MainCalculatorViewModel"
              Title="MainCalculator">
 
-    <StackLayout Orientation="Horizontal">
-        <Entry TextColor="Black" Text="{Binding Input}" Margin="0,12,43,0"/>
+    <StackLayout Orientation="Vertical">
+        <Entry TextColor="White" Text="{Binding Input}" Margin="0,12,43,0"/>
+        <Entry TextColor="White" Text="{Binding Output}" Margin="0,12,43,0"/>
 
         <Button Text="Calculate" TextColor="White" FontSize="12" FontFamily="RobotoMono" FontAttributes="Bold" CharacterSpacing="0" Margin="44,10,43,35"
                                     CornerRadius="20" Command="{Binding CalculateCommand}">

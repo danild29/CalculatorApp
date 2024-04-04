@@ -65,6 +65,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <ProjectReference Include="..\Pfz.Math.Tests\Pfz.Math.Tests.csproj" />
+	  <ProjectReference Include="..\Pfz.Math\Pfz.Math.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <MauiXaml Update="View\MainCalculator.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
